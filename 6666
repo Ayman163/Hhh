@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A[3] = {1, 2, 3};
+    int B[3] = {4, 5, 6};
+    
+    // تعريف مصفوفة ثنائية الأبعاد: صفين و 3 أعمدة
+    int C[2][3];
+
+    // نسخ عناصر A إلى الصف الأول (index 0)
+    for (int j = 0; j < 3; j++) {
+        C[0][j] = A[j];
+    }
+
+    // نسخ عناصر B إلى الصف الثاني (index 1)
+    for (int j = 0; j < 3; j++) {
+        C[1][j] = B[j];
+    }
+
+    // طباعة المصفوفة ثنائية الأبعاد
+    cout << "2D Array Content:\n";
+    for (int i = 0; i < 2; i++) { // حلقة للصفوف
+        for (int j = 0; j < 3; j++) { // حلقة للأعمدة
+            cout << C[i][j] << " ";
+        }
+        cout << endl; // سطر جديد بعد كل صف
+    }
+
+    return 0;
+}
